@@ -15,6 +15,7 @@ def project_name
 end
 
 task :build do
+  system "rm #{project_name}.gemspec"
   generator = GemspecDepsGen.new
 
   generator.generate_dependencies "#{project_name}.gemspec.erb", "#{project_name}.gemspec"
