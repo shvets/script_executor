@@ -157,7 +157,7 @@ class ScriptExecutor
   end
 
   def sudo commands
-    "sudo -S -p 'sudo password: ' #{commands}"
+    "sudo -S -p 'sudo password: ' -s -- '#{commands}'"
   end
 
 end

@@ -7,7 +7,7 @@ describe ScriptExecutor do
     :simulate => false,
     :domain => "localhost",
     :user => "user",
-    :remote => truez
+    :remote => true
   }
 
   subject { ScriptExecutor.new }
@@ -35,6 +35,15 @@ describe ScriptExecutor do
       %Q(
         ls -al
         ls
+      )
+    end
+  end
+
+  it "should execute commands locally from the block of code as sudo" do
+    subject.execute :sudo => true do
+      %Q(
+        cp /Users/oshvets/work/dev_contrib/installs/oracle-client/instantclient-basic-10.2.0.4.0-macosx-x86.zip /usr/local/oracle
+        cp /Users/oshvets/work/dev_contrib/installs/oracle-client/instantclient-sdk-10.2.0.4.0-macosx-x86.zip /usr/local/oracle
       )
     end
   end
