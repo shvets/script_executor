@@ -42,8 +42,8 @@ describe ScriptExecutor do
   it "should execute commands locally from the block of code as sudo" do
     subject.execute :sudo => true do
       %Q(
-        cp /Users/oshvets/work/dev_contrib/installs/oracle-client/instantclient-basic-10.2.0.4.0-macosx-x86.zip /usr/local/oracle
-        cp /Users/oshvets/work/dev_contrib/installs/oracle-client/instantclient-sdk-10.2.0.4.0-macosx-x86.zip /usr/local/oracle
+        whoami
+        whoami
       )
     end
   end

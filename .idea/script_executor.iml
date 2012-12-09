@@ -15,7 +15,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.3, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.3, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="file_utils (v1.0.5, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gemcutter (v0.7.1, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gemspec_deps_gen (v1.0.5, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.15, RVM: ruby-1.9.3-p327 [script_executor]) [gem]" level="application" />
