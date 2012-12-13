@@ -7,4 +7,9 @@
 == Version 1.0.1
 
 * Add missing dependency.
-* Fix issue when sudo has multiple commands
+* Fix issue when sudo has multiple commands.
+
+== Version 1.1.0
+
+* Refactoring code.
+* Introduce Executable module.

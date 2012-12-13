@@ -5,6 +5,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/executable.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/script_executor/executable.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES" afterPath="$PROJECT_DIR$/CHANGES" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/script_executor.rb" afterPath="$PROJECT_DIR$/lib/script_executor.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/script_executor/script_executor.rb" afterPath="$PROJECT_DIR$/lib/script_executor/script_executor.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/script_executor_spec.rb" afterPath="$PROJECT_DIR$/spec/script_executor_spec.rb" />
@@ -73,7 +74,7 @@
     <file path="$PROJECT_DIR$/../../ui/src/Gemfile" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355412928924" ignored="false" />
     <file path="/fragment.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355062484724" ignored="false" />
     <file path="/script_executor.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355415829525" ignored="false" />
-    <file path="/CHANGES" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355062946290" ignored="false" />
+    <file path="/CHANGES" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355417128513" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.8.7-p371@r21/gems/rake-0.8.7/lib/rake.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355156976039" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.8.7-p371@r21/gems/file_utils-1.0.5/lib/file_utils/file_utils.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355082830869" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/bin/install_oracle_client.sh" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355179739279" ignored="false" />
@@ -170,10 +171,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="executable.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="executable.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/script_executor/executable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="43" selection-start="2606" selection-end="2606" vertical-scroll-proportion="2.860927">
+            <state line="108" column="43" selection-start="2606" selection-end="2606" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHANGES" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CHANGES">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="29" selection-start="197" selection-end="224" vertical-scroll-proportion="0.37086093">
               <folding />
             </state>
           </provider>
@@ -206,7 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/CHANGES" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/lib/script_executor/version.rb" />
@@ -214,6 +223,7 @@
         <option value="$PROJECT_DIR$/lib/script_executor/script_executor.rb" />
         <option value="$PROJECT_DIR$/spec/script_executor_spec.rb" />
         <option value="$PROJECT_DIR$/lib/script_executor/executable.rb" />
+        <option value="$PROJECT_DIR$/CHANGES" />
       </list>
     </option>
   </component>
@@ -547,13 +557,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="262" y="33" width="1613" height="1087" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36161616" sideWeight="0.9955329" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22463305" sideWeight="0.63838387" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22463305" sideWeight="0.63838387" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989071" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -672,11 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGES">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.7178003" />
@@ -726,7 +731,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/script_executor/executable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="43" selection-start="2606" selection-end="2606" vertical-scroll-proportion="2.860927">
+        <state line="108" column="43" selection-start="2606" selection-end="2606" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="197" selection-end="224" vertical-scroll-proportion="0.37086093">
           <folding />
         </state>
       </provider>
