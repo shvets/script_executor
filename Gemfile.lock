@@ -1,16 +1,21 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    archive-tar-minitar (0.5.2)
+    columnize (0.3.6)
     diff-lcs (1.1.3)
     file_utils (1.0.5)
     gemcutter (0.7.1)
     gemspec_deps_gen (1.0.5)
       file_utils
     highline (1.6.15)
+    linecache19 (0.5.13)
+      ruby_core_source (>= 0.1.4)
     metaclass (0.0.1)
     mocha (0.13.1)
       metaclass (~> 0.0.1)
     net-ssh (2.6.2)
+    rake (10.0.3)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -19,6 +24,15 @@ GEM
     rspec-expectations (2.12.0)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.12.0)
+    ruby-debug-base19x (0.11.30.pre10)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      rake (>= 0.8.1)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug-ide (0.4.17.beta14)
+      rake (>= 0.8.1)
+    ruby_core_source (0.1.5)
+      archive-tar-minitar (>= 0.5.2)
 
 PLATFORMS
   ruby
@@ -27,6 +41,9 @@ DEPENDENCIES
   gemcutter
   gemspec_deps_gen
   highline
+  linecache19 (= 0.5.13)
   mocha
   net-ssh
   rspec
+  ruby-debug-base19x (= 0.11.30.pre10)
+  ruby-debug-ide (= 0.4.17.beta14)

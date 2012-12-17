@@ -1,6 +1,7 @@
 require 'executable'
+require 'script_locator'
 
 class ScriptExecutor
-  include Executable
+  include Executable, ScriptLocator
 
 end

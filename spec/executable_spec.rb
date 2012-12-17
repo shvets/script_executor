@@ -1,10 +1,14 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
-require 'script_executor'
+require 'executable'
 
-describe ScriptExecutor do
+class MyExecutable
+  include Executable
+end
 
-  subject { ScriptExecutor.new }
+describe MyExecutable do
+
+  subject { MyExecutable.new }
 
   before :all do
     @password ||= ask("Enter password for #{ENV['USER']}:  ") { |q| q.echo = '*' }

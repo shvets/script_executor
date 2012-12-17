@@ -13,3 +13,7 @@
 
 * Refactoring code.
 * Introduce Executable module.
+
+== Version 1.2.0
+
+* Introduce ScriptLocator module.
