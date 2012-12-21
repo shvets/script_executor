@@ -239,10 +239,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CHANGES" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CHANGES" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CHANGES">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+            <state line="22" column="2" selection-start="300" selection-end="317" vertical-scroll-proportion="0.57050246">
               <folding />
             </state>
           </provider>
@@ -259,10 +259,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.68881685">
+            <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -907,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGES">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/erb.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="1" selection-start="2081" selection-end="2109" vertical-scroll-proportion="-14.615385">
@@ -946,7 +939,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.68881685">
+        <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="2" selection-start="300" selection-end="317" vertical-scroll-proportion="0.57050246">
           <folding />
         </state>
       </provider>
