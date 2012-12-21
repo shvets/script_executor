@@ -2,28 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6995392e-f204-4557-be32-fd20f300d877" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/script_executor.iml" afterPath="$PROJECT_DIR$/.idea/script_executor.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES" afterPath="$PROJECT_DIR$/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/script_executor/script_locator.rb" afterPath="$PROJECT_DIR$/lib/script_executor/script_locator.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/script_locator_spec.rb" afterPath="$PROJECT_DIR$/spec/script_locator_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/script_executor/version.rb" afterPath="$PROJECT_DIR$/lib/script_executor/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="script_executor.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762103123" ignored="false" />
+    <file path="/Dummy.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1356118530293" ignored="false" />
     <file path="/Gemfile" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355437179953" ignored="false" />
     <file path="/script_executor_spec.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762516678" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/thor/oracle_client.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355417447890" ignored="false" />
     <file path="/oracle_client.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355417361715" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/docs/how-to-install-tools-on-mountain-lion.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355179284273" ignored="false" />
     <file path="/how-to-install-tools-on-mountain-lion.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355179183290" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/rubygems.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482853" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/syck.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482853" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/mkmf.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482853" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/multi-tk.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482853" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/set.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/json/common.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/tkextlib/tile.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/rexml/xpath_parser.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
-    <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/tk.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@script_executor/gems/rspec-expectations-2.12.0/lib/rspec/matchers.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061696975" ignored="false" />
     <file path="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/tk/autoload.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355061482854" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@script_executor/gems/mocha-0.13.1/lib/mocha/object_methods.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355432956485" ignored="false" />
@@ -67,7 +63,7 @@
     <file path="$PROJECT_DIR$/../../ui/src/Gemfile" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355507081269" ignored="false" />
     <file path="/fragment.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355433500821" ignored="false" />
     <file path="/script_executor.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762503911" ignored="false" />
-    <file path="/CHANGES" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762366578" ignored="false" />
+    <file path="/CHANGES" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1356118598805" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.8.7-p371@r21/gems/rake-0.8.7/lib/rake.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355156976039" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/ruby-1.8.7-p371@r21/gems/file_utils-1.0.5/lib/file_utils/file_utils.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355082830869" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/bin/install_oracle_client.sh" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355179739279" ignored="false" />
@@ -122,8 +118,8 @@
     <file path="/executable.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355416708647" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/thor/tomcat.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355410403079" ignored="false" />
     <file path="/tomcat.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355410403079" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ui/src/thor/ssh.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762752713" ignored="false" />
-    <file path="/ssh.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355516960127" ignored="false" />
+    <file path="$PROJECT_DIR$/../../ui/src/thor/ssh.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355767370410" ignored="false" />
+    <file path="/ssh.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355767136872" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/thor/homer.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355416035915" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/vendor/gems/script_executor/lib/script_executor/script_executor.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355415829525" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/vendor/gems/script_executor/lib/script_executor.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355411914177" ignored="false" />
@@ -162,8 +158,8 @@
     <file path="/test2.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355506601837" ignored="false" />
     <file path="/signoff.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355507121000" ignored="false" />
     <file path="/script_helper.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762300792" ignored="false" />
-    <file path="/script_locator_spec.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355766716130" ignored="false" />
-    <file path="/script_locator.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762926157" ignored="false" />
+    <file path="/script_locator_spec.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1356121354915" ignored="false" />
+    <file path="/script_locator.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1356120843372" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,27 +179,25 @@
       <file leaf-file-name="executable_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/executable_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="58" selection-start="0" selection-end="2064" vertical-scroll-proportion="0.0">
+            <state line="13" column="32" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script_locator_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/script_locator_spec.rb">
+      <file leaf-file-name="executable.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/script_executor/executable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#457#511#0" expanded="true" />
-              </folding>
+            <state line="140" column="58" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".rvmrc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.rvmrc">
+      <file leaf-file-name="script_executor.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/script_executor/script_executor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="7" column="20" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,19 +212,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="executable.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/script_executor/executable.rb">
+      <file leaf-file-name="script_locator.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/script_executor/script_locator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="0" selection-start="4090" selection-end="4090" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script_locator.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/script_executor/script_locator.rb">
+      <file leaf-file-name="erb.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/erb.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+            <state line="71" column="1" selection-start="2081" selection-end="2109" vertical-scroll-proportion="-14.615385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/script_executor/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -239,8 +242,19 @@
       <file leaf-file-name="CHANGES" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CHANGES">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="30" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+            <state line="22" column="19" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script_locator_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/script_locator_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="67" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#520#580#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,25 +262,7 @@
       <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.51452285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="28" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dsl.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@global/gems/bundler-1.2.3/lib/bundler/dsl.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="8" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+            <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.68881685">
               <folding />
             </state>
           </provider>
@@ -293,13 +289,14 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/script_executor.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/script_executor/executable.rb" />
         <option value="$PROJECT_DIR$/lib/script_executor/script_helper.rb" />
-        <option value="$PROJECT_DIR$/lib/script_executor/version.rb" />
-        <option value="$PROJECT_DIR$/CHANGES" />
         <option value="$PROJECT_DIR$/lib/script_executor/script_executor.rb" />
         <option value="$PROJECT_DIR$/spec/script_executor_spec.rb" />
         <option value="$PROJECT_DIR$/lib/script_locator.rb" />
+        <option value="$PROJECT_DIR$/lib/script_executor/executable.rb" />
+        <option value="$PROJECT_DIR$/lib/script_executor/version.rb" />
+        <option value="$PROJECT_DIR$/CHANGES" />
+        <option value="$PROJECT_DIR$/lib/script_executor/script_locator.rb" />
         <option value="$PROJECT_DIR$/spec/script_locator_spec.rb" />
       </list>
     </option>
@@ -409,6 +406,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; RVM: ruby-1.9.3-p327 [script_executor] &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script_executor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; RVM: ruby-1.9.3-p327 [script_executor] &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.9.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script_executor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="script_executor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -469,10 +498,11 @@
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="RSpec.executable_spec">
+  <component name="RunManager" selected="RSpec.script_locator_spec">
     <configuration default="false" name="ScriptExecutor should execute commands from :script parameter" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="script_executor" />
@@ -486,6 +516,7 @@
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -521,6 +552,7 @@
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -555,6 +587,7 @@
         <env name="RUBYLIB" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@script_executor/gems/ruby-debug-base19x-0.11.30.pre11/lib:$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@script_executor/gems/ruby-debug-ide-0.4.17.beta14/lib" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -578,6 +611,40 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="script_locator_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="script_executor" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/script_locator_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="" />
@@ -588,6 +655,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -616,6 +684,7 @@
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -636,6 +705,7 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -669,18 +739,20 @@
       <ConfigurationWrapper RunnerId="RubyRemoteDebugRunner" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Ruby remote debug.remote" />
       <item index="1" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands from :script parameter" />
       <item index="2" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands locally from the block of code as sudo" />
       <item index="3" class="java.lang.String" itemvalue="RSpec.executable_spec" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.script_locator_spec" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.executable_spec" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.script_locator_spec" />
         <item index="1" class="java.lang.String" itemvalue="RSpec.executable_spec" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands from :script parameter" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands locally from the block of code as sudo" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.executable_spec" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands from :script parameter" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.ScriptExecutor should execute commands locally from the block of code as sudo" />
       </list>
     </recent_temporary>
   </component>
@@ -701,11 +773,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22782387" sideWeight="0.6020202" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23420548" sideWeight="0.67474747" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32525253" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32525253" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -751,6 +823,8 @@
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -773,44 +847,41 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/script_locator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="58" selection-start="95" selection-end="95" vertical-scroll-proportion="0.034006376" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/executable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="64" selection-start="91" selection-end="91" vertical-scroll-proportion="0.033195022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="186" selection-end="186" vertical-scroll-proportion="0.23284823">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327@global/gems/bundler-1.2.3/lib/bundler/dsl.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="8" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="61" column="8" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.016859852" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rvmrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/script_executor/executable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="0" selection-start="4090" selection-end="4090" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/script_executor/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/script_executor/script_locator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="140" column="58" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -822,27 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/executable_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="0" selection-end="2064" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/script_locator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="58" selection-start="95" selection-end="95" vertical-scroll-proportion="0.034006376">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/executable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="64" selection-start="91" selection-end="91" vertical-scroll-proportion="0.033195022">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/script_executor.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="41" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
@@ -850,39 +900,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/script_locator_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/script_executor/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#457#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.rvmrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+        <state line="2" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGES">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+        <state line="22" column="19" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/erb.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="1" selection-start="2081" selection-end="2109" vertical-scroll-proportion="-14.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/script_executor/script_locator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/executable_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/script_locator_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="67" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#520#580#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.51452285">
+        <state line="31" column="3" selection-start="675" selection-end="675" vertical-scroll-proportion="0.68881685">
           <folding />
         </state>
       </provider>

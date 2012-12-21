@@ -17,3 +17,7 @@
 == Version 1.2.0
 
 * Introduce ScriptLocator module.
+
+== Version 1.2.1
+
+* Fix binding issue.

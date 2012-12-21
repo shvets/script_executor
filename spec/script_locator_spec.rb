@@ -11,15 +11,18 @@ describe MyScriptLocator do
   subject { MyScriptLocator.new }
 
   it "should read after __END__" do
-    result = subject.scripts(__FILE__, binding)
+    result = subject.scripts(__FILE__)
 
     result.should_not be_nil
   end
 
   it "should locate script" do
-    result = subject.scripts(__FILE__, binding)
+    result = subject.scripts(__FILE__)
 
-    result['test1'].should_not be_nil
+    name = "alisa"
+    script = subject.evaluate_script_body(result['test1'], binding)
+
+    script.should =~ /#{name}/
   end
 
 end
@@ -28,7 +31,7 @@ __END__
 
 [test1]
 
-echo "test1"
+echo "<%= name %>"
 
 [test2]
 

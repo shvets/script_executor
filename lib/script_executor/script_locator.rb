@@ -2,10 +2,16 @@ require 'erb'
 
 module ScriptLocator
 
-  def scripts file, binding
+  def scripts file
     data = extract_data file
 
-    locate_scripts(data, binding)
+    locate_scripts(data)
+  end
+
+  def evaluate_script_body content, binding
+    template = ERB.new content
+
+    template.result(binding).strip
   end
 
   private
@@ -18,7 +24,7 @@ module ScriptLocator
     content[index+9..-1]
   end
 
-  def locate_scripts data, binding
+  def locate_scripts data
     scripts = {}
 
     stream = StringIO.new data
@@ -40,17 +46,7 @@ module ScriptLocator
       end
     end
 
-    scripts.each do |key, script|
-      scripts[key] = execute_template(script, binding).strip
-    end
-
     scripts
-  end
-
-  def execute_template content, binding
-    template = ERB.new content
-
-    template.result(binding)
   end
 
 end
