@@ -21,3 +21,7 @@
 == Version 1.2.1
 
 * Fix binding issue.
+
+== Version 1.3.0
+
+* Adding line action parameter.

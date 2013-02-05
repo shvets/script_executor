@@ -72,8 +72,8 @@ describe MyExecutable do
     it "should execute commands from the block of code" do
       result = subject.execute @remote_info do
         %Q(
-        whoami
-      )
+          whoami
+        )
       end
 
       result.should == ENV['USER']
@@ -82,8 +82,8 @@ describe MyExecutable do
     it "should execute sudo command" do
       result = subject.execute @remote_info.merge(:sudo => true, :password => @password) do
         %Q(
-         ~/apache-tomcat-7.0.34/bin/shutdown.sh
-      )
+           ~/apache-tomcat-7.0.34/bin/shutdown.sh
+        )
       end
 
       p result
