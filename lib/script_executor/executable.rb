@@ -5,6 +5,10 @@ require 'script_executor/output_buffer'
 
 module Executable
 
+  def initialize
+    @output = $stdout
+  end
+
   def execute params={}, &code
     if params.class != Hash
       simple_commands = commands_from_object(params)
@@ -17,7 +21,7 @@ module Executable
     commands = locate_commands script, &code
 
     if commands.nil?
-      puts "No commands were provided!"
+      @output.puts "No commands were provided!"
       return
     end
 
@@ -28,19 +32,20 @@ module Executable
     user           = params[:user]
     password       = params[:password]
     capture_output = params[:capture_output]
+    suppress_output = params[:suppress_output]
     simulate       = params[:simulate]
     line_action    = params[:line_action]
 
     print_execution commands, remote, domain, user, nil, simulate
 
     unless simulate
-      line_action = lambda { |line| print line } unless line_action
       storage = capture_output ? OutputBuffer.new : nil
+      suppress_output = suppress_output.nil? ? capture_output : suppress_output
 
       if remote
-        execute_ssh commands, domain, user, password, line_action, storage
+        execute_ssh commands, domain, user, password, line_action, suppress_output, storage
       else
-        execute_command commands, password, line_action, storage
+        execute_command commands, password, line_action, suppress_output, storage
       end
 
       storage.buffer.join("\n") if storage
@@ -54,27 +59,27 @@ module Executable
       ssh_command = ssh_command(domain, user, identity_file)
 
       if simulate
-        puts "Remote script: '#{ssh_command}'"
-        puts "-------"
+        @output.puts "Remote script: '#{ssh_command}'"
+        @output.puts "-------"
         print_commands commands
-        puts "-------"
+        @output.puts "-------"
       else
-        puts "Remote execution on: '#{ssh_command}'"
-        puts "-------"
+        @output.puts "Remote execution on: '#{ssh_command}'"
+        @output.puts "-------"
         print_commands commands
-        puts "-------"
+        @output.puts "-------"
       end
     else
       if simulate
-        puts "Script:"
-        puts "-------"
+        @output.puts "Script:"
+        @output.puts "-------"
         print_commands commands
-        puts "-------"
+        @output.puts "-------"
       else
-        puts "Local execution:"
-        puts "-------"
+        @output.puts "Local execution:"
+        @output.puts "-------"
         print_commands(commands)
-        puts "-------"
+        @output.puts "-------"
       end
     end
   end
@@ -83,18 +88,20 @@ module Executable
     lines = StringIO.new commands
 
     lines.each_line do |line|
-      puts line
+      @output.puts line
     end
   end
 
-  def execute_command commands, password, line_action, storage
+  def execute_command commands, password, line_action, suppress_output, storage
     commands = commands + inline_password(password) if password
 
     IO.popen(commands) do |pipe|
       pipe.each("\r") do |line|
+        @output.print(line) unless suppress_output
+
         storage.save(line.chomp) if storage
 
-        line_action.call(line)
+        line_action.call(line) if line_action
       end
     end
   end
@@ -103,7 +110,7 @@ module Executable
     password ? "<<EOF\n#{password}\nEOF" : ""
   end
 
-  def execute_ssh commands, domain, user, password, line_action, storage
+  def execute_ssh commands, domain, user, password, line_action, suppress_output, storage
     if password.nil?
       password = ask("Enter password for #{user}: ") { |q| q.echo = '*' }
     end
@@ -115,9 +122,11 @@ module Executable
           channel.request_pty # <- problem must be here.
           channel.send_data password + "\n"
         else
+          @output.print(line) unless suppress_output
+
           storage.save(line.chomp) if storage
 
-          line_action.call(line)
+          line_action.call(line) if line_action
         end
       end
 

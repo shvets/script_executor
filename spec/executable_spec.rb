@@ -80,7 +80,7 @@ describe MyExecutable do
     end
 
     it "should execute sudo command" do
-      result = subject.execute @remote_info.merge(:sudo => true, :password => @password) do
+      result = subject.execute @remote_info.merge(:sudo => true, :password => @password, :suppress_output => false) do
         %Q(
            ~/apache-tomcat-7.0.34/bin/shutdown.sh
         )
