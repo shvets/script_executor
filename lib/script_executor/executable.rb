@@ -5,8 +5,8 @@ require 'script_executor/output_buffer'
 
 module Executable
 
-  def initialize
-    @output = $stdout
+  def output
+    @output ||= $stdout
   end
 
   def execute params={}, &code
@@ -21,7 +21,7 @@ module Executable
     commands = locate_commands script, &code
 
     if commands.nil?
-      @output.puts "No commands were provided!"
+      output.puts "No commands were provided!"
       return
     end
 
@@ -59,27 +59,27 @@ module Executable
       ssh_command = ssh_command(domain, user, identity_file)
 
       if simulate
-        @output.puts "Remote script: '#{ssh_command}'"
-        @output.puts "-------"
+        output.puts "Remote script: '#{ssh_command}'"
+        output.puts "-------"
         print_commands commands
-        @output.puts "-------"
+        output.puts "-------"
       else
-        @output.puts "Remote execution on: '#{ssh_command}'"
-        @output.puts "-------"
+        output.puts "Remote execution on: '#{ssh_command}'"
+        output.puts "-------"
         print_commands commands
-        @output.puts "-------"
+        output.puts "-------"
       end
     else
       if simulate
-        @output.puts "Script:"
-        @output.puts "-------"
+        output.puts "Script:"
+        output.puts "-------"
         print_commands commands
-        @output.puts "-------"
+        output.puts "-------"
       else
-        @output.puts "Local execution:"
-        @output.puts "-------"
+        output.puts "Local execution:"
+        output.puts "-------"
         print_commands(commands)
-        @output.puts "-------"
+        output.puts "-------"
       end
     end
   end
@@ -88,7 +88,7 @@ module Executable
     lines = StringIO.new commands
 
     lines.each_line do |line|
-      @output.puts line
+      output.puts line
     end
   end
 
@@ -97,7 +97,7 @@ module Executable
 
     IO.popen(commands) do |pipe|
       pipe.each("\r") do |line|
-        @output.print(line) unless suppress_output
+        output.print(line) unless suppress_output
 
         storage.save(line.chomp) if storage
 
@@ -122,7 +122,7 @@ module Executable
           channel.request_pty # <- problem must be here.
           channel.send_data password + "\n"
         else
-          @output.print(line) unless suppress_output
+          output.print(line) unless suppress_output
 
           storage.save(line.chomp) if storage
 
