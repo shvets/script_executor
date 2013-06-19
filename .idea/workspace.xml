@@ -6,7 +6,7 @@
     </list>
     <ignored path="script_executor.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1371677611274" ignored="false" />
+    <file path="/Dummy.txt" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1371677617651" ignored="false" />
     <file path="/Gemfile" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355437179953" ignored="false" />
     <file path="/script_executor_spec.rb" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355762516678" ignored="false" />
     <file path="$PROJECT_DIR$/../../ui/src/thor/oracle_client.thor" changelist="6995392e-f204-4557-be32-fd20f300d877" time="1355417447890" ignored="false" />
@@ -636,7 +636,11 @@
       <created>1371677612825</created>
       <updated>1371677612825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bug fixes">
+      <created>1371677621458</created>
+      <updated>1371677621458</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
