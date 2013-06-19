@@ -1,5 +1,5 @@
 require 'net/ssh'
-require "highline/import"
+require "highline"
 
 require 'script_executor/output_buffer'
 
@@ -112,7 +112,7 @@ module Executable
 
   def execute_ssh commands, domain, user, password, line_action, suppress_output, storage
     if password.nil?
-      password = ask("Enter password for #{user}: ") { |q| q.echo = '*' }
+      password = HighLine.new.ask("Enter password for #{user}: ") { |q| q.echo = '*' }
     end
 
     Net::SSH.start(domain, user, :password => password) do |session|

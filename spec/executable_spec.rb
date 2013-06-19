@@ -11,7 +11,7 @@ describe MyExecutable do
   subject { MyExecutable.new }
 
   before :all do
-    @password ||= ask("Enter password for #{ENV['USER']}:  ") { |q| q.echo = '*' }
+    @password ||= HighLine.new.ask("Enter password for #{ENV['USER']}:  ") { |q| q.echo = '*' }
   end
 
   describe "local execution" do

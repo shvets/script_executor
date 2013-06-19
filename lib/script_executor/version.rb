@@ -1,3 +1,3 @@
-module ScriptExecutor
-  VERSION = "1.3.2"
+class ScriptExecutor
+  VERSION = "1.3.3"
 end
