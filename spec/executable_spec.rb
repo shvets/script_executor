@@ -46,7 +46,6 @@ describe MyExecutable do
       )
       end
 
-      puts "2 #{@password}"
       result.to_s.should == "root\nroot"
     end
   end

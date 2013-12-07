@@ -15,28 +15,30 @@ Or install it yourself as:
     $ gem install script_executor
 
 ## Usage
-    
-    executor = ScriptExecutor.new
 
-    executor.execute "ls" # execute locally
+```ruby
+executor = ScriptExecutor.new
 
-    executor.execute :remote => true, :script => "ls -al", :domain => "localhost", :user => "user" # execute remote
+executor.execute "ls" # execute locally
 
-    executor.remote_execute :script => "ls -al", :domain => "localhost", :user => "user" # execute remote
+executor.execute :remote => true, :script => "ls -al", :domain => "localhost", :user => "user" # execute remote
 
-    executor.remote_execute :sudo => true, :script => "/etc/init.d/tomcat stop", :domain => "somehost", :user => "user" # execute remote
+executor.remote_execute :script => "ls -al", :domain => "localhost", :user => "user" # execute remote
 
-    server_info = {  
-      :domain => "some.host",
-      :user => "some.user",
-    }
+executor.remote_execute :sudo => true, :script => "/etc/init.d/tomcat stop", :domain => "somehost", :user => "user" # execute remote
 
-    executor.remote_execute :sudo => true, server_info do # execute remote with sudo
-      %Q(
-        /etc/init.d/tomcat stop
-        /etc/init.d/tomcat start
-      )
-    end
+server_info = {
+  :domain => "some.host",
+  :user => "some.user",
+}
+
+executor.remote_execute :sudo => true, server_info do # execute remote with sudo
+  %Q(
+    /etc/init.d/tomcat stop
+    /etc/init.d/tomcat start
+  )
+end
+```
 
 ## Contributing
 
