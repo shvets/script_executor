@@ -37,8 +37,9 @@ executor.execute "ls"
 ```ruby
 server_info = {
   :remote => true,
-  :domain => "some.host",
-  :user => "some.user",
+  :domain => "some_host",
+  :user => "some_user",
+  :password => "some_password"
 }
 
 executor.execute server_info.merge(:script => "ls -al")

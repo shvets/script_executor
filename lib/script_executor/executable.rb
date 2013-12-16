@@ -9,7 +9,7 @@ module Executable
       params = {}
       script = simple_commands
     else
-      script = params[:script]
+      script = params.delete(:script)
     end
 
     commands = locate_commands script, &code

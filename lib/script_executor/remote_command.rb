@@ -3,16 +3,17 @@ require 'net/ssh'
 require "highline"
 
 class RemoteCommand
-  attr_reader :domain, :user, :password, :identity_file, :suppress_output,  :capture_output, :simulate
+  attr_reader :host, :user, :options, :suppress_output,  :capture_output, :simulate
 
   def initialize params
-    @domain = params[:domain]
-    @user = params[:user]
-    @password = params[:password]
-    @identity_file = params[:identity_file]
-    @suppress_output = params[:suppress_output]
-    @capture_output = params[:capture_output]
-    @simulate = params[:simulate]
+    @host = params.delete(:domain)
+    @user = params.delete(:user)
+
+    @suppress_output = params.delete(:suppress_output)
+    @capture_output = params.delete(:capture_output)
+    @simulate = params.delete(:simulate)
+
+    @options = params
   end
 
   def execute commands, line_action
@@ -22,9 +23,9 @@ class RemoteCommand
       storage = capture_output ? OutputBuffer.new : nil
       output = suppress_output ? nil : $stdout
 
-      password = HighLine.new.ask("Enter password for #{user}: ") { |q| q.echo = '*' } if @password.nil?
+      options[password] = HighLine.new.ask("Enter password for #{options[:user]}: ") { |q| q.echo = '*' } if options[:password].nil?
 
-      Net::SSH.start(domain, user, :password => password) do |session|
+      Net::SSH.start(host, user, options) do |session|
         session.exec(commands) do |channel, _, line|
           if ask_password?(line)
             channel.request_pty
@@ -47,7 +48,7 @@ class RemoteCommand
   private
 
   def print commands, output
-    ssh_command = ssh_command(domain, user, identity_file)
+    ssh_command = ssh_command(host, options)
 
     if simulate
       output.puts "Remote script: '#{ssh_command}'"
@@ -74,10 +75,12 @@ class RemoteCommand
     end
   end
 
-  def ssh_command domain, user, identity_file
-    cmd = user.nil? ? domain : "#{user}@#{domain}"
+  def ssh_command host, options
+    cmd = options[:user].nil? ? host : "#{options[:user]}@#{host}"
 
-    cmd << " -i #{identity_file}" if identity_file
+    cmd << " -i #{options[:identity_file]}" if options[:identity_file]
+
+    cmd << " -p #{options[:port]}" if options[:port]
 
     #cmd << " -t -t"
 
