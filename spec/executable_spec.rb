@@ -78,14 +78,33 @@ describe MyExecutable do
       result.should == ENV['USER']
     end
 
-    it "should execute sudo command" do
-      result = subject.execute @remote_info.merge(:sudo => true, :password => @password, :suppress_output => false) do
-        %Q(
-           ~/apache-tomcat-7.0.34/bin/shutdown.sh
-        )
-      end
+    #it "should execute sudo command" do
+    #  result = subject.execute @remote_info.merge(:sudo => true, :password => @password, :suppress_output => false) do
+    #    %Q(
+    #       ~/apache-tomcat-7.0.34/bin/shutdown.sh
+    #    )
+    #  end
+    #
+    #  p result
+    #end
+  end
 
-      p result
+  describe "vagrant" do
+    before :all do
+      @remote_info = {
+          :domain => "127.0.0.1",
+          :user => "vagrant",
+          :password => "vagrant",
+          :port => 2222,
+          :remote => true,
+          :capture_output => true
+      }
+    end
+
+    it "should execute commands from :script parameter" do
+      result = subject.execute @remote_info.merge(:script => "whoami")
+
+      result.should == "vagrant"
     end
   end
 

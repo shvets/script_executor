@@ -17,13 +17,14 @@ class RemoteCommand
   end
 
   def execute commands, line_action
+    options[:password] = HighLine.new.ask("Enter password for #{options[:user]}: ") { |q| q.echo = '*' } if options[:password].nil?
+    options[:user] = user
+
     print commands, $stdout
 
     unless simulate
       storage = capture_output ? OutputBuffer.new : nil
       output = suppress_output ? nil : $stdout
-
-      options[password] = HighLine.new.ask("Enter password for #{options[:user]}: ") { |q| q.echo = '*' } if options[:password].nil?
 
       Net::SSH.start(host, user, options) do |session|
         session.exec(commands) do |channel, _, line|
