@@ -3,6 +3,7 @@ source "https://rubygems.org"
 group :default do
   gem "highline"
   gem "net-ssh"
+  gem "text-interpolator"
 end
 
 group :development do

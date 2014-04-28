@@ -1,4 +1,5 @@
 require 'erb'
+require 'text_interpolator'
 
 module ScriptLocator
 
@@ -8,10 +9,22 @@ module ScriptLocator
     locate_scripts(data)
   end
 
-  def evaluate_script_body content, binding
-    template = ERB.new content
+  def evaluate_script_body content, env, type=:erb
+    case type
+      when :erb
+        template = ERB.new content
+        template.result(env).strip
 
-    template.result(binding).strip
+      when :string
+        interpolator = TextInterpolator.new
+
+        interpolator.interpolate content, env
+
+      else
+        interpolator = TextInterpolator.new
+
+        interpolator.interpolate content, env
+    end
   end
 
   private
@@ -21,7 +34,7 @@ module ScriptLocator
 
     index = content.index("__END__\n")
 
-    content[index+9..-1]
+    index.nil? ? content : content[index+9..-1]
   end
 
   def locate_scripts data

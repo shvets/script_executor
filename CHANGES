@@ -46,6 +46,10 @@
 
 * Adding port as parameter.
 
-== Version 1.3.36
+== Version 1.3.6
 
 * Big fix.
+
+== Version 1.3.7
+
+* Using text-interpolator as an additional engine.

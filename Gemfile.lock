@@ -26,6 +26,7 @@ GEM
       rake (>= 0.8.1)
     ruby-debug-ide (0.4.17)
       rake (>= 0.8.1)
+    text-interpolator (1.0.0)
 
 PLATFORMS
   ruby
@@ -39,3 +40,4 @@ DEPENDENCIES
   rspec
   ruby-debug-base19x (= 0.11.30.pre12)
   ruby-debug-ide (= 0.4.17)
+  text-interpolator

@@ -10,19 +10,46 @@ describe MyScriptLocator do
 
   subject { MyScriptLocator.new }
 
-  it "should read after __END__" do
-    scripts = subject.scripts(__FILE__)
+  describe "#scripts" do
+    it "reads after __END__" do
+      file = __FILE__
 
-    scripts.should_not be_nil
+      scripts = subject.scripts(file)
+
+      scripts.should_not be_nil
+    end
+
+    it "reads from file completely if it does not have __END__ tag" do
+      file = File.expand_path('test.conf', File.dirname(__FILE__))
+
+      scripts = subject.scripts(file)
+
+      scripts.should_not be_nil
+    end
   end
 
-  it "should locate script" do
-    scripts = subject.scripts(__FILE__)
+  describe "#evaluate_script_body" do
+    it "locates script inside current file" do
+      scripts = subject.scripts(__FILE__)
 
-    name = "alisa"
-    result = subject.evaluate_script_body(scripts['test1'], binding)
+      name = "alisa"
 
-    result.should =~ /#{name}/
+      result = subject.evaluate_script_body(scripts['test1'], binding)
+
+      result.should =~ /#{name}/
+    end
+
+    it "locates script inside external file and evaluates it as string" do
+      file = File.expand_path('test.conf', File.dirname(__FILE__))
+
+      scripts = subject.scripts(file)
+
+      env = {:name => "alisa"}
+
+      result = subject.evaluate_script_body(scripts['test1'], env, :string)
+
+      result.should =~ /#{env[:name]}/
+    end
   end
 
 end
