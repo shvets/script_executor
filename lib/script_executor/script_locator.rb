@@ -45,8 +45,8 @@ module ScriptLocator
     current_key = nil
 
     stream.each_line do |line|
-      if line =~ /^(\s)*\[[\w\d\s]*\](\s)*$/
-        marker = line.strip.gsub(/\[[\w\d\s]*\]/).first
+      if line =~ /^(\s)*\[[\w\d\s\-\_]*\](\s)*$/
+        marker = line.strip.gsub(/\[[\w\d\s\-\_]*\]/).first
 
         if !marker.nil? and marker.strip.length > 0
           key = marker[1..marker.length-2]
