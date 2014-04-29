@@ -1,14 +1,14 @@
 source "https://rubygems.org"
 
 group :default do
-  gem "highline"
-  gem "net-ssh"
-  gem "text-interpolator"
+  gem "highline", "~>1.6"
+  gem "net-ssh", "~>2.8"
+  gem "text-interpolator", "~>1.0"
 end
 
 group :development do
-  gem "gemspec_deps_gen"
-  gem "gemcutter"
+  gem "gemspec_deps_gen", "~>1.1"
+  gem "gemcutter", "~>0.7"
 end
 
 group :test do
