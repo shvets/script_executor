@@ -27,6 +27,14 @@ module ScriptLocator
     end
   end
 
+  def script_title script
+    if script[0] == '#'
+      StringIO.new(script[1..-1]).readline.strip
+    else
+      nil
+    end
+  end
+
   private
 
   def extract_data file
@@ -40,9 +48,9 @@ module ScriptLocator
   def locate_scripts data
     scripts = {}
 
-    stream = StringIO.new data
-
     current_key = nil
+
+    stream = StringIO.new data
 
     stream.each_line do |line|
       if line =~ /^(\s)*\[[\w\d\s\-\_]*\](\s)*$/

@@ -16,7 +16,7 @@ describe MyScriptLocator do
 
       scripts = subject.scripts(file)
 
-      scripts.should_not be_nil
+      expect(scripts).not_to be_nil
     end
 
     it "reads from file completely if it does not have __END__ tag" do
@@ -24,7 +24,7 @@ describe MyScriptLocator do
 
       scripts = subject.scripts(file)
 
-      scripts.should_not be_nil
+      expect(scripts).not_to be_nil
     end
   end
 
@@ -36,7 +36,8 @@ describe MyScriptLocator do
 
       result = subject.evaluate_script_body(scripts['test1'], binding)
 
-      result.should =~ /#{name}/
+      expect(result).to match /#{name}/
+      expect(subject.script_title(scripts['test1'])).to eq "Some description"
     end
 
     it "locates script inside external file and evaluates it as string" do
@@ -48,7 +49,7 @@ describe MyScriptLocator do
 
       result = subject.evaluate_script_body(scripts['test1'], env, :string)
 
-      result.should =~ /#{env[:name]}/
+      expect(result).to match /#{env[:name]}/
     end
   end
 
@@ -57,6 +58,7 @@ end
 __END__
 
 [test1]
+# Some description
 
 echo "<%= name %>"
 

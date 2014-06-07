@@ -57,3 +57,7 @@
 == Version 1.3.8
 
 * Allow '-' and '_' symbols in script name.
+
+== Version 1.4.0
+
+* Adding script_title method to API.
