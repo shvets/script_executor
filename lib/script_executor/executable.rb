@@ -4,6 +4,8 @@ require 'script_executor/remote_command'
 module Executable
 
   def execute params={}, &code
+    params = params.clone # try not to destroy external hash
+
     if params.class != Hash
       simple_commands = commands_from_object(params)
       params = {}
