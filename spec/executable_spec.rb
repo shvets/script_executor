@@ -21,13 +21,13 @@ describe MyExecutable do
       }
     end
 
-    it "should execute commands locally from :script parameter" do
+    it "executes commands from :script parameter" do
       result = subject.execute @local_info.merge(:script => "whoami")
 
-      result.should == ENV['USER']
+      expect(result).to eq ENV['USER']
     end
 
-    it "should execute commands locally from the block of code" do
+    it "executes commands from the block of code" do
       result = subject.execute  @local_info do
         %Q(
           whoami
@@ -35,10 +35,10 @@ describe MyExecutable do
       )
       end
 
-      result.to_s.should == "#{ENV['USER']}\n#{ENV['USER']}"
+      expect(result).to eq "#{ENV['USER']}\n#{ENV['USER']}"
     end
 
-    it "should execute commands locally from the block of code as sudo" do
+    it "executes commands from the block of code as sudo" do
       result = subject.execute @local_info.merge(:sudo => true, :password => @password) do
         %Q(
           whoami
@@ -46,7 +46,7 @@ describe MyExecutable do
       )
       end
 
-      result.to_s.should == "root\nroot"
+      expect(result).to eq "root\nroot"
     end
   end
 
@@ -62,20 +62,32 @@ describe MyExecutable do
       }
     end
 
-    it "should execute commands from :script parameter" do
+    it "executes commands from :script parameter" do
       result = subject.execute @remote_info.merge(:script => "whoami")
 
-      result.should == ENV['USER']
+      expect(result).to eq ENV['USER']
     end
 
-    it "should execute commands from the block of code" do
+    it "executes commands from the block of code" do
       result = subject.execute @remote_info do
         %Q(
           whoami
         )
       end
 
-      result.should == ENV['USER']
+      expect(result).to eq ENV['USER']
+    end
+
+    it "executes commands with :host parameter instead of :domain parameter" do
+      result = subject.execute @remote_info.merge(:script => "whoami", :host => 'localhost', :domain => nil)
+
+      expect(result).to eq ENV['USER']
+    end
+
+    it "executes commands with :host parameter instead of :domain parameter" do
+      result = subject.execute @remote_info.merge(:script => "whoami", :home => 'some_home')
+
+      expect(result).to eq ENV['USER']
     end
 
     #it "should execute sudo command" do
@@ -92,7 +104,7 @@ describe MyExecutable do
   describe "vagrant" do
     before :all do
       @remote_info = {
-          :domain => "127.0.0.1",
+          :domain => "22.22.22.22",
           :user => "vagrant",
           :password => "vagrant",
           :port => 2222,
@@ -104,7 +116,7 @@ describe MyExecutable do
     it "should execute commands from :script parameter" do
       result = subject.execute @remote_info.merge(:script => "whoami")
 
-      result.should == "vagrant"
+      expect(result).to eq "vagrant"
     end
   end
 

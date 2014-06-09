@@ -7,6 +7,8 @@ class LocalCommand
   attr_reader :password, :suppress_output, :capture_output, :simulate
 
   def initialize params
+    params = sanitize_parameters params
+
     @password = params[:password]
     @suppress_output = params[:suppress_output]
     @capture_output = params[:capture_output]
@@ -65,6 +67,17 @@ class LocalCommand
 
   def inline_password password
     password ? "<<EOF\n#{password}\nEOF" : ""
+  end
+
+  def sanitize_parameters params
+    params.each do |key, _|
+      params.delete(key) unless permitted_params.include? key.to_sym
+    end
+  end
+
+  def permitted_params
+    @permitted_params ||= [:script, :sudo, :remote, :line_action, :password,
+                           :suppress_output, :capture_output, :simulate]
   end
 end
 

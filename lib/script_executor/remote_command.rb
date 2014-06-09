@@ -6,7 +6,10 @@ class RemoteCommand
   attr_reader :host, :user, :options, :suppress_output,  :capture_output, :simulate
 
   def initialize params
+    params = sanitize_parameters params
+
     @host = params.delete(:domain)
+    @host = params.delete(:host) if host.nil? and params[:host]
     @user = params.delete(:user)
 
     @suppress_output = params.delete(:suppress_output)
@@ -90,6 +93,20 @@ class RemoteCommand
 
   def ask_password? line
     line =~ /^\[sudo\] password for user:/ || line =~ /sudo password:/ || line =~ /Password:/
+  end
+
+  def sanitize_parameters params
+    params.each do |key, _|
+      params.delete(key) unless permitted_params.include? key.to_sym
+    end
+
+    params
+  end
+
+  def permitted_params
+    @permitted_params ||= [:script, :sudo, :remote, :line_action, :password,
+                           :suppress_output, :capture_output, :simulate,
+                           :domain, :host, :user, :options]
   end
 end
 
