@@ -4,6 +4,7 @@ group :default do
   gem "highline", "~>1.6"
   gem "net-ssh", "~>2.8"
   gem "text-interpolator", "~>1.0"
+  gem "json_pure", "~>1.8"
 end
 
 group :development do

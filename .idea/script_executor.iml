@@ -201,6 +201,7 @@
     <orderEntry type="library" scope="PROVIDED" name="gemcutter (v0.7.1, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gemspec_deps_gen (v1.1.2, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.15, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.8.1, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="metaclass (v0.0.1, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mocha (v0.13.1, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-ssh (v2.8.0, RVM: ruby-1.9.3-p545 [script_executor]) [gem]" level="application" />
