@@ -73,3 +73,7 @@
 == Version 1.5.0
 
 * Adding BaseProvision class to group convenient methods to build the provision.
+
+== Version 1.5.1
+
+* Bug fix.

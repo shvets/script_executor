@@ -106,7 +106,7 @@ class RemoteCommand
   def permitted_params
     @permitted_params ||= [:script, :sudo, :remote, :line_action, :password,
                            :suppress_output, :capture_output, :simulate,
-                           :domain, :host, :user, :options]
+                           :domain, :host, :port, :user, :options]
   end
 end
 
