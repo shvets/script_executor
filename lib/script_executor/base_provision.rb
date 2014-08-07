@@ -23,7 +23,7 @@ class BaseProvision
 
     create_script_methods
 
-    create_thor_methods(parent_class) if parent_class.ancestors.include?(Thor)
+    create_thor_methods(parent_class) if parent_class.ancestors.collect(&:to_s).include?('Thor')
 
     @server_info = env[:node] ? env[:node] : {}
   end
