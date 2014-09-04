@@ -33,7 +33,7 @@ class RemoteCommand
         session.exec(commands) do |channel, _, line|
           if ask_password?(line)
             channel.request_pty
-            channel.send_data password + "\n"
+            channel.send_data options[:password] + "\n"
           else
             output.print(line) if output
             storage.save(line.chomp) if storage

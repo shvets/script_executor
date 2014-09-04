@@ -21,6 +21,8 @@ module Executable
     else
       commands = sudo(commands) if params[:sudo]
 
+      params.delete(:sudo)
+
       remote = params.delete(:remote)
       line_action = params.delete(:line_action)
 
