@@ -85,3 +85,7 @@
 == Version 1.5.3
 
 * Bug fix.
+
+== Version 1.5.4
+
+* Print errors in case of existing errors.

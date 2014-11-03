@@ -18,12 +18,19 @@ module ScriptLocator
       when :string
         interpolator = TextInterpolator.new
 
-        interpolator.interpolate content, env
+        result = interpolator.interpolate content, env
 
+        puts interpolator.errors if interpolator.errors.size > 0
+
+        result
       else
         interpolator = TextInterpolator.new
 
-        interpolator.interpolate content, env
+        result = interpolator.interpolate content, env
+
+        puts interpolator.errors if interpolator.errors.size > 0
+
+        result
     end
   end
 

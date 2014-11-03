@@ -57,7 +57,11 @@ class BaseProvision
   def read_config config_file_name
     hash = JSON.parse(File.read(config_file_name), :symbolize_names => true)
 
-    interpolator.interpolate hash
+    result = interpolator.interpolate hash
+
+    puts interpolator.errors if interpolator.errors.size > 0
+
+    result
   end
 
   def terminal
