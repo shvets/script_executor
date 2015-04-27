@@ -3,7 +3,7 @@ require 'net/ssh'
 require "highline"
 
 class RemoteCommand
-  attr_reader :host, :user, :options, :suppress_output,  :capture_output, :simulate
+  attr_reader :host, :user, :options, :suppress_output,  :capture_output, :output_stream, :simulate
 
   def initialize params
     params = sanitize_parameters params
@@ -14,6 +14,7 @@ class RemoteCommand
 
     @suppress_output = params.delete(:suppress_output)
     @capture_output = params.delete(:capture_output)
+    @output_stream = params[:output_stream]
     @simulate = params.delete(:simulate)
 
     @options = params
@@ -27,7 +28,11 @@ class RemoteCommand
 
     unless simulate
       storage = capture_output ? OutputBuffer.new : nil
-      output = suppress_output ? nil : $stdout
+      output = if output_stream
+          output_stream
+        else
+          suppress_output ? nil : $stdout
+        end
 
       Net::SSH.start(host, user, options) do |session|
         session.exec(commands) do |channel, _, line|
@@ -35,8 +40,14 @@ class RemoteCommand
             channel.request_pty
             channel.send_data options[:password] + "\n"
           else
-            output.print(line) if output
-            storage.save(line.chomp) if storage
+            if output
+              output.write(line)
+              output.flush
+            end
+
+            if storage
+              storage.save(line.chomp)
+            end
 
             line_action.call(line) if line_action
           end
@@ -105,7 +116,7 @@ class RemoteCommand
 
   def permitted_params
     @permitted_params ||= [:script, :sudo, :remote, :line_action, :password,
-                           :suppress_output, :capture_output, :simulate,
+                           :suppress_output, :capture_output, :output_stream, :simulate,
                            :domain, :host, :port, :user, :options]
   end
 end

@@ -89,3 +89,7 @@
 == Version 1.5.4
 
 * Print errors in case of existing errors.
+
+== Version 1.5.5
+
+* Adding new input parameter: output_stream
