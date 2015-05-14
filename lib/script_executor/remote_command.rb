@@ -21,7 +21,7 @@ class RemoteCommand
   end
 
   def execute commands, line_action
-    options[:password] = HighLine.new.ask("Enter password for #{options[:user]}: ") { |q| q.echo = '*' } if options[:password].nil?
+    options[:password] = HighLine.new.ask("Enter password for #{user}: ") { |q| q.echo = '*' } if options[:password].nil?
     options[:user] = user
 
     print commands, $stdout
@@ -63,7 +63,7 @@ class RemoteCommand
   private
 
   def print commands, output
-    ssh_command = ssh_command(host, options)
+    ssh_command = ssh_command(user, host, options[:port], options[:identity_file])
 
     if simulate
       output.puts "Remote script: '#{ssh_command}'"
@@ -90,12 +90,12 @@ class RemoteCommand
     end
   end
 
-  def ssh_command host, options
-    cmd = options[:user].nil? ? host : "#{options[:user]}@#{host}"
+  def ssh_command user, host, port, identity_file
+    cmd = user ? host : "#{user}@#{host}"
 
-    cmd << " -i #{options[:identity_file]}" if options[:identity_file]
+    cmd << " -i #{identity_file}" if identity_file
 
-    cmd << " -p #{options[:port]}" if options[:port]
+    cmd << " -p #{port}" if port
 
     #cmd << " -t -t"
 

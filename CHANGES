@@ -93,3 +93,7 @@
 == Version 1.5.5
 
 * Adding new input parameter: output_stream
+
+== Version 1.5.6
+
+* Bug fix.
