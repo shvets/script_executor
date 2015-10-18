@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
   
   spec.add_runtime_dependency "highline", ["~> 1.6"]
-  spec.add_runtime_dependency "net-ssh", ["~> 2.8"]
+  spec.add_runtime_dependency "net-ssh", ["~> 2.9"]
   spec.add_runtime_dependency "text-interpolator", ["~> 1.0"]
   spec.add_runtime_dependency "json_pure", ["~> 1.8"]
   spec.add_development_dependency "gemspec_deps_gen", ["~> 1.1"]
