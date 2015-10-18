@@ -97,3 +97,7 @@
 == Version 1.5.6
 
 * Bug fix.
+
+== Version 1.6.0
+
+* Upgrade net:ssh, small bug fix.

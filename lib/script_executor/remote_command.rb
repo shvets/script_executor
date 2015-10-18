@@ -95,7 +95,7 @@ class RemoteCommand
 
     cmd << " -i #{identity_file}" if identity_file
 
-    cmd << " -p #{port}" if port
+    #cmd << " -p #{port}" if port
 
     #cmd << " -t -t"
 
