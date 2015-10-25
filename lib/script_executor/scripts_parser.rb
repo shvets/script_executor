@@ -20,7 +20,7 @@ class ScriptsParser < Parslet::Parser
   rule(:codeLine)   { emptyLines >> codeChars.as(:codeLine) >> newline }
 
   rule(:nameChars)  { match['\w\d_'].repeat(1) }
-  rule(:codeChars)  { match['(.*)\w\d $_#"<>{}\'\/\.%=!\-+/\*|:'].repeat(1) }
+  rule(:codeChars)  { match['(.*)\w\d $_#"<>{}\'\/\.%=!\-+/\*|:~@'].repeat(1) }
 
   rule(:emptyLines) { emptyLine.repeat }
   rule(:emptyLine)  { spaces >> newline }
