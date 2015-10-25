@@ -101,3 +101,7 @@
 == Version 1.6.0
 
 * Upgrade net:ssh, small bug fix.
+
+== Version 1.7.0
+
+* Replace simple parsing with parslet-based parsing.

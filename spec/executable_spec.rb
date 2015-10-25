@@ -1,14 +1,10 @@
-require File.expand_path('spec_helper', File.dirname(__FILE__))
+require 'spec_helper'
+require 'rspec/mocks'
 
 require 'executable'
 
-class MyExecutable
-  include Executable
-end
-
-describe MyExecutable do
-
-  subject { MyExecutable.new }
+describe Executable do
+  subject { Object.new.extend Executable }
 
   before :all do
     @password ||= HighLine.new.ask("Enter password for #{ENV['USER']}:  ") { |q| q.echo = '*' }
@@ -114,6 +110,8 @@ describe MyExecutable do
     end
 
     it "should execute commands from :script parameter" do
+      expect_any_instance_of(RemoteCommand).to receive(:execute).and_return 'vagrant'
+
       result = subject.execute @remote_info.merge(:script => "whoami")
 
       expect(result).to eq "vagrant"

@@ -1,14 +1,10 @@
-require File.expand_path('spec_helper', File.dirname(__FILE__))
+require 'spec_helper'
 
 require 'script_locator'
 
-class MyScriptLocator
-  include ScriptLocator
-end
+describe ScriptLocator do
 
-describe MyScriptLocator do
-
-  subject { MyScriptLocator.new }
+  subject { Object.new.extend ScriptLocator }
 
   describe "#scripts" do
     it "reads after __END__" do
@@ -20,7 +16,7 @@ describe MyScriptLocator do
     end
 
     it "reads from file completely if it does not have __END__ tag" do
-      file = File.expand_path('test.conf', File.dirname(__FILE__))
+      file = File.expand_path('support/test.conf', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
 
@@ -34,22 +30,23 @@ describe MyScriptLocator do
 
       name = "alisa"
 
-      result = subject.evaluate_script_body(scripts['test1'], binding)
+      result = subject.evaluate_script_body(scripts[:test1][:codeLines], binding)
 
-      expect(result).to match /#{name}/
-      expect(subject.script_title(scripts['test1'])).to eq "Some description"
+      expect(result.first).to match /#{name}/
+
+      expect(scripts[:test1][:comment]).to eq "Some description"
     end
 
     it "locates script inside external file and evaluates it as string" do
-      file = File.expand_path('test.conf', File.dirname(__FILE__))
+      file = File.expand_path('support/test.conf', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
 
       env = {:name => "alisa"}
 
-      result = subject.evaluate_script_body(scripts['test1'], env, :string)
+      result = subject.evaluate_script_body(scripts[:test1][:codeLines], env, :string)
 
-      expect(result).to match /#{env[:name]}/
+      expect(result.first).to match /#{env[:name]}/
     end
   end
 

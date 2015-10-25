@@ -1,0 +1,16 @@
+{
+  "node": {
+    "domain": "22.22.22.22", // remote host, see "config.vm.synced_folder"
+    "port": "22",            // default ssh port
+    "user": "vagrant",       // vagrant user name
+    "password": "vagrant",   // vagrant user password
+    "home": "/home/vagrant",
+    "remote": true
+  },
+
+  "project": {
+    "home": "#{node.home}/acceptance_demo",
+    "ruby_version": "2.2.3",
+    "gemset": "acceptance_demo"
+  }
+}

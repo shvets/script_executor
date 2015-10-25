@@ -42,7 +42,7 @@ class BaseProvision
     provision = self
 
     provision.script_list.each do |name, value|
-      title = provision.script_title(value)
+      title = value[:comment]
 
       title = title.nil? ? name : title
 
@@ -73,7 +73,7 @@ class BaseProvision
   end
 
   def run server_info, script_name, params
-    execute(server_info) { evaluate_script_body(script_list[script_name], params, :string) }
+    execute(server_info) { evaluate_script_body(script_list[script_name][:codeLines], params, :string) }
   end
 
   def run_command server_info, command
