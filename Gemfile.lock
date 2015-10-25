@@ -34,16 +34,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
+  awesome_print (~> 1.6)
   gemcutter (~> 0.7)
   gemspec_deps_gen (~> 1.1)
   highline (~> 1.6)
   json_pure (~> 1.8)
   net-ssh (~> 2.9)
-  parslet
+  parslet (~> 1.7)
   rspec (~> 3.0)
   text-interpolator (~> 1.1)
-  thor
+  thor (~> 0.19)
 
 BUNDLED WITH
    1.10.6
