@@ -13,33 +13,18 @@ module ScriptLocator
   end
 
   def evaluate_script_body content, env, type=:erb
-    if content.class == Array
-      content.each_with_index do |el, index|
-        content[index] = evaluate_script_body el, env, type
-      end
-    else
-      case type
-        when :erb
-          template = ERB.new content
-          template.result(env).strip
+    case type
+      when :erb
+        template = ERB.new content
+        template.result(env).strip
+      else
+        interpolator = TextInterpolator.new
 
-        when :string
-          interpolator = TextInterpolator.new
+        result = interpolator.interpolate content, env
 
-          result = interpolator.interpolate content, env
+        puts interpolator.errors if interpolator.errors.size > 0
 
-          puts interpolator.errors if interpolator.errors.size > 0
-
-          result
-        else
-          interpolator = TextInterpolator.new
-
-          result = interpolator.interpolate content, env
-
-          puts interpolator.errors if interpolator.errors.size > 0
-
-          result
-      end
+        result
     end
   end
 

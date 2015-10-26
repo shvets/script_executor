@@ -26,14 +26,34 @@ class BaseProvision
     create_thor_methods(parent_class) if parent_class.ancestors.collect(&:to_s).include?('Thor')
 
     @server_info = env[:node] ? env[:node] : {}
+
+    @terminal ||= HighLine.new
   end
 
-  protected
+  def run script_name, params={}, type=:string
+      execute(server_info) do
+      evaluate_script_body(script_list[script_name.to_sym][:codeLines].join("\n"), params, type)
+    end
+  end
+
+  def ask_password message
+    @terminal.ask(message) { |q| q.echo = "*" }
+  end
+
+  def read_config config_file_name
+    hash = JSON.parse(File.read(config_file_name), :symbolize_names => true)
+
+    result = interpolator.interpolate hash
+
+    puts interpolator.errors if interpolator.errors.size > 0
+
+    result
+  end
 
   def create_script_methods
     script_list.keys.each do |name|
       singleton_class.send(:define_method, name.to_sym) do
-        self.send :run, server_info, name.to_s, env
+        self.run name.to_s, env
       end
     end
   end
@@ -52,32 +72,6 @@ class BaseProvision
         provision.send "#{name}".to_sym
       end
     end
-  end
-
-  def read_config config_file_name
-    hash = JSON.parse(File.read(config_file_name), :symbolize_names => true)
-
-    result = interpolator.interpolate hash
-
-    puts interpolator.errors if interpolator.errors.size > 0
-
-    result
-  end
-
-  def terminal
-    @terminal ||= HighLine.new
-  end
-
-  def ask_password message
-    terminal.ask(message) { |q| q.echo = "*" }
-  end
-
-  def run server_info, script_name, params
-    execute(server_info) { evaluate_script_body(script_list[script_name][:codeLines], params, :string) }
-  end
-
-  def run_command server_info, command
-    execute(server_info.merge({script: command}))
   end
 
 end

@@ -102,6 +102,10 @@
 
 * Upgrade net:ssh, small bug fix.
 
-== Version 1.7.0, 1.7.1
+== Version 1.7.0
 
 * Replace simple parsing with parslet-based parsing.
+
+== Version 1.7.1, 1.7.2
+
+* Bug fix.

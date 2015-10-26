@@ -32,8 +32,6 @@ class ScriptsParser < Parslet::Parser
     begin
       parsed_content = super content + "\n"
 
-      # ap parsed_content
-
       transformer = ScriptsTransformer.new
 
       transformer.apply(parsed_content)[:scripts]

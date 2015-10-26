@@ -21,11 +21,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "net-ssh", ["~> 2.9"]
   spec.add_runtime_dependency "text-interpolator", ["~> 1.1"]
   spec.add_runtime_dependency "json_pure", ["~> 1.8"]
-  spec.add_runtime_dependency "parslet", [">= 0"]
-  spec.add_runtime_dependency "thor", [">= 0"]
+  spec.add_runtime_dependency "parslet", ["~> 1.7"]
+  spec.add_runtime_dependency "thor", ["~> 0.19"]
   spec.add_development_dependency "gemspec_deps_gen", ["~> 1.1"]
   spec.add_development_dependency "gemcutter", ["~> 0.7"]
-  spec.add_development_dependency "awesome_print", [">= 0"]
+  spec.add_development_dependency "awesome_print", ["~> 1.6"]
 
 end
 
