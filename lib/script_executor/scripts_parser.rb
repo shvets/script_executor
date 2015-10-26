@@ -12,11 +12,11 @@ class ScriptsParser < Parslet::Parser
   rule(:ignored)    { comment.repeat }
   rule(:scripts)    { script.repeat }
 
-  rule(:script)     { emptyLines >> (name >> comment.maybe >> codeLines).as(:script) }
+  rule(:script)     { emptyLines >> (name >> comment.maybe >> code).as(:script) }
   rule(:comment)    { emptyLines >> spaces >> (str('#') >> spaces >> (newline.absent? >> any).repeat.as(:comment)) >> newline }
   rule(:name)       { spaces >> str('[') >> spaces >> spaces >> nameChars.as(:name) >> spaces >> str(']') >> spaces >> newline }
 
-  rule(:codeLines)  { (emptyLines >> codeLine.repeat.maybe >> emptyLines).as(:codeLines) }
+  rule(:code)  { (emptyLines >> codeLine.repeat.maybe >> emptyLines).as(:code) }
   rule(:codeLine)   { emptyLines >> codeChars.as(:codeLine) >> newline }
 
   rule(:nameChars)  { match['\w\d_'].repeat(1) }

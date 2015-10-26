@@ -9,13 +9,13 @@ class ScriptsTransformer < Parslet::Transform
     language[:scripts].each do |script|
       name = script[:script][:name].to_sym
       comment = script[:script][:comment].to_s
-      code_lines = script[:script][:codeLines]
+      code = script[:script][:code]
 
-      code_lines.each_with_index do |codeLine, index|
-        code_lines[index] = codeLine[:codeLine].to_s
+      code.each_with_index do |codeLine, index|
+        code[index] = codeLine[:codeLine].to_s
       end
 
-      new_scripts[name] = {comment: comment, codeLines: code_lines}
+      new_scripts[name] = {comment: comment, code: code}
     end
 
     language[:scripts] = new_scripts

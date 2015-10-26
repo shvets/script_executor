@@ -95,11 +95,11 @@ require 'script_locator'
 
 include ScriptLocator
 
-puts scripts(__FILE__) # [command1, command2]
+scripts = scripts(__FILE__) # [command1, command2]
 
 name = "john"
 
-result = evaluate_script_body(result['command1'], binding)
+result = evaluate_script_body(scripts[:command1][:code], binding)
 
 puts result # john
 __END__
@@ -113,7 +113,69 @@ echo "<%= name %>"
 echo "test2"
 ```
 
+## Using BaseProvision
 
+- Create project configuration file:
+
+```json
+# base.conf.json
+{
+  "node": {
+    "domain": "22.22.22.22", // remote host, see "config.vm.synced_folder"
+    "port": "22",            // default ssh port
+    "user": "vagrant",       // vagrant user name
+    "password": "vagrant",   // vagrant user password
+    "home": "/home/vagrant",
+    "remote": true
+  },
+
+  "project": {
+    "home": "#{node.home}/acceptance_demo",
+    "ruby_version": "2.2.3",
+    "gemset": "acceptance_demo"
+  }
+}
+```
+
+- Create file with shell commands:
+
+```
+# script.sh
+
+
+[echo]
+
+echo "Hello world!"
+
+
+[ubuntu_update]
+
+sudo apt-get update
+```
+
+- Create provision based on thor and use it:
+
+```
+# install.thor
+
+class MyProvision < Thor
+  @provision = BaseProvision.new self, 'base.conf.json', ['script.sh']
+  @provision.create_thor_methods(self)
+  
+  desc "local_command", "local_command"
+  def local_command
+    invoke :echo
+    invoke :ubuntu_update
+  end
+end
+
+my_provision = MyProvision.new
+
+thor my_provision:echo
+thor my_provision:ubuntu_update
+
+thor my_provision:local_command
+```
 
 ## Contributing
 

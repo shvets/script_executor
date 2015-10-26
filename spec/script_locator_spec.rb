@@ -16,7 +16,7 @@ describe ScriptLocator do
     end
 
     it "reads from file completely if it does not have __END__ tag" do
-      file = File.expand_path('support/test.conf', File.dirname(__FILE__))
+      file = File.expand_path('support/script4.sh', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
 
@@ -30,23 +30,23 @@ describe ScriptLocator do
 
       name = "alisa"
 
-      result = subject.evaluate_script_body(scripts[:test1][:codeLines], binding)
+      result = subject.evaluate_script_body(scripts[:test1][:code], binding)
 
-      expect(result.first).to match /#{name}/
+      expect(result).to match /#{name}/
 
       expect(scripts[:test1][:comment]).to eq "Some description"
     end
 
     it "locates script inside external file and evaluates it as string" do
-      file = File.expand_path('support/test.conf', File.dirname(__FILE__))
+      file = File.expand_path('support/script4.sh', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
 
       env = {:name => "alisa"}
 
-      result = subject.evaluate_script_body(scripts[:test1][:codeLines], env, :string)
+      result = subject.evaluate_script_body(scripts[:test1][:code], env, :string)
 
-      expect(result.first).to match /#{env[:name]}/
+      expect(result).to match /#{env[:name]}/
     end
   end
 

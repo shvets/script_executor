@@ -3,14 +3,10 @@ require 'spec_helper'
 require 'thor'
 require 'script_executor/base_provision'
 
-class ThorClass < Thor
-
-end
+class ThorClass < Thor; end
 
 describe BaseProvision do
-  subject {
-    BaseProvision.new ThorClass, 'spec/support/base.conf.json', ['spec/support/big_script.sh']
-  }
+  subject { BaseProvision.new 'spec/support/base.conf.json', ['spec/support/script1.sh'] }
 
   describe "#initialize" do
     it "parses content from file" do

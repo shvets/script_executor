@@ -13,6 +13,8 @@ module ScriptLocator
   end
 
   def evaluate_script_body content, env, type=:erb
+    content = content.join("\n") if content.kind_of? Array
+
     case type
       when :erb
         template = ERB.new content
