@@ -1,6 +1,7 @@
 require 'parslet'
 
-class ScriptsTransformer < Parslet::Transform
+class ScriptsTransform < Parslet::Transform
+
   rule(:language => subtree(:language)) do
     language.delete(:ignored)
 
@@ -11,8 +12,8 @@ class ScriptsTransformer < Parslet::Transform
       comment = script[:script][:comment].to_s
       code = script[:script][:code]
 
-      code.each_with_index do |codeLine, index|
-        code[index] = codeLine[:codeLine].to_s
+      code.each_with_index do |code_line, index|
+        code[index] = code_line[:code_line].to_s
       end
 
       new_scripts[name] = {comment: comment, code: code}

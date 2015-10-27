@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 require 'script_executor/scripts_parser'
-require 'script_executor/scripts_transformer'
+require 'script_executor/scripts_transform'
 
 describe ScriptsParser do
   describe "#parse" do

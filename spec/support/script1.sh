@@ -76,7 +76,7 @@ sudo apt-get install -y node
 
 
 #######################################
-[rbenv]
+ [rbenv ]
 # Installs node
 
 sudo apt-get install -y rbenv
