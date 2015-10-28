@@ -4,13 +4,16 @@ require 'script_executor/scripts_parser'
 require 'script_executor/scripts_transform'
 
 describe ScriptsParser do
+
   describe "#parse" do
     it "parses content from file 1" do
       content = File.read('spec/support/script1.sh')
 
       parsed_content = subject.parse(content)
 
-      ap parsed_content
+      #ap parsed_content
+
+      ap transform parsed_content
     end
 
     it "parses content from file 2" do
@@ -18,7 +21,9 @@ describe ScriptsParser do
 
       parsed_content = subject.parse(content)
 
-      ap parsed_content
+      #ap parsed_content
+
+      ap transform parsed_content
     end
 
     it "parses content from file 3" do
@@ -26,7 +31,9 @@ describe ScriptsParser do
 
       parsed_content = subject.parse(content)
 
-      ap parsed_content
+      #ap parsed_content
+
+      ap transform parsed_content
     end
 
     it "parses content from file 4" do
@@ -34,7 +41,9 @@ describe ScriptsParser do
 
       parsed_content = subject.parse(content)
 
-      ap parsed_content
+      #ap parsed_content
+
+      ap transform parsed_content
     end
 
     it "parses content from file 5" do
@@ -42,7 +51,32 @@ describe ScriptsParser do
 
       parsed_content = subject.parse(content)
 
-      ap parsed_content
+      #ap parsed_content
+
+      ap transform parsed_content
     end
+
+#     it "test" do
+#       content = <<-DATA
+# #!/usr/bin/env bash
+#
+# # Some description
+# [name]
+#
+# # some comment
+# aaa
+# bbb
+#       DATA
+#
+#       parsed_content = subject.parse(content)
+#
+#       ap parsed_content
+#     end
+  end
+
+  def transform content
+    script_transform = ScriptsTransform.new
+
+    script_transform.transform content
   end
 end

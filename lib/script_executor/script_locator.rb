@@ -1,15 +1,23 @@
 require 'erb'
 require 'text_interpolator'
+
 require 'script_executor/scripts_parser'
+require 'script_executor/scripts_transform'
 
 module ScriptLocator
 
   def scripts file
     data = extract_data file
 
-    scripts_parser = ScriptsParser.new
+    begin
+      scripts_parser = ScriptsParser.new
+      parsed_content = scripts_parser.parse data
 
-    scripts_parser.parse data
+      transformer = ScriptsTransform.new
+      transformer.transform(parsed_content)
+    rescue Parslet::ParseFailed => failure
+      puts failure.cause.ascii_tree
+    end
   end
 
   def evaluate_script_body content, env, type=:erb
