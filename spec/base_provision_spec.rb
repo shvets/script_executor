@@ -10,7 +10,7 @@ describe BaseProvision do
 
   describe "#initialize" do
     it "parses content from file" do
-      expect(subject.script_list.size).to equal(10)
+      expect(subject.script_list.size).to equal(9)
     end
   end
 
