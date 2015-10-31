@@ -1,28 +1,32 @@
 #!/usr/bin/env bash
 
-[test1]
+
+# [test1]
 # Some description
 
 echo "<%= name %>"
 
-[test2]
+
+#######################################
+# [test2]
 
 echo "test2"
 
+
 #######################################
-[echo]
+# [echo]
 
 echo "Hello world!"
 
 
 #######################################
-[ubuntu_update]
+# [ubuntu_update]
 
 sudo apt-get update
 
 
 #######################################
-[prepare_linux]
+# [prepare_linux]
 # Updates linux core packages
 
 sudo apt-get update
@@ -51,7 +55,7 @@ sudo apt-get install -y libffi-dev
 
 
 #######################################
-[rvm]
+# [rvm]
 # Installs rvm
 
 curl -L https://get.rvm.io | bash
@@ -60,7 +64,7 @@ curl -L https://get.rvm.io | bash
 
 
 #######################################
-[ruby]
+# [ruby]
 # Installs ruby
 
 source /usr/local/rvm/scripts/rvm
@@ -69,14 +73,14 @@ rvm install ruby-2.2.3
 
 
 #######################################
-[node]
+# [node]
 # Installs node
 
 sudo apt-get install -y node
 
 
 #######################################
- [rbenv ]
+# [rbenv ]
 # Installs node
 
 sudo apt-get install -y rbenv
@@ -84,8 +88,9 @@ git clone git://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset
 
 
 #######################################
-[prepare]
+# [prepare]
 # to support nokogiri
+
 sudo apt-get install -y libgmp-dev
 
 # to support capybara-webkit

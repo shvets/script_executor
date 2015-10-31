@@ -55,17 +55,21 @@ describe ScriptsParser do
 
       ap transform parsed_content
     end
-
+#
 #     it "test" do
 #       content = <<-DATA
 # #!/usr/bin/env bash
 #
+# #######################################
+#
 # # Some description
-# [name]
+# # [name]
 #
 # # some comment
-# aaa
-# bbb
+#
+#       aaa
+#       bbb
+#
 #       DATA
 #
 #       parsed_content = subject.parse(content)
