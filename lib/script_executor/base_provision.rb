@@ -27,9 +27,9 @@ class BaseProvision
     create_script_methods
   end
 
-  def run script_name, params={}, type=:string
+  def run script_name, type=:string, env={}
     execute(server_info) do
-      evaluate_script_body(script_list[script_name.to_sym][:code], params, type)
+      evaluate_script_body(script_list[script_name.to_sym][:code], env, type)
     end
   end
 
@@ -49,13 +49,13 @@ class BaseProvision
 
   def create_script_methods
     script_list.keys.each do |name|
-      singleton_class.send(:define_method, name.to_sym) do
-        self.run name.to_s, env
+      singleton_class.send(:define_method, name.to_sym) do |type, params|
+        self.run name.to_s, type, params.empty? ? env : env.merge(params: params.join(' '))
       end
     end
   end
 
-  def create_thor_methods parent_class
+  def create_thor_methods parent_class, type=:string
     if parent_class.ancestors.collect(&:to_s).include?('Thor')
       provision = self
 
@@ -66,8 +66,8 @@ class BaseProvision
 
         parent_class.send(:desc, name, title) if parent_class.respond_to?(:desc)
 
-        parent_class.send(:define_method, name.to_sym) do
-          provision.send "#{name}".to_sym
+        parent_class.send(:define_method, name.to_sym) do |*params|
+          provision.send "#{name}".to_sym, type, params
         end
       end
     end
