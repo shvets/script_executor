@@ -50,7 +50,7 @@ class BaseProvision
   def create_script_methods
     script_list.keys.each do |name|
       singleton_class.send(:define_method, name.to_sym) do |type, params|
-        self.run name.to_s, type, params.empty? ? env : env.merge(params: params.join(' '))
+        self.run name.to_s, type, env.merge(ARGV: params.join(' '))
       end
     end
   end

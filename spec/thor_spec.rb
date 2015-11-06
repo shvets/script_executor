@@ -19,12 +19,16 @@ describe ThorSpec do
       ThorSpec.provision.env[:name] = 'name'
 
       subject.invoke :test2
+
+      expect(ThorSpec.provision.errors).to be_empty
     end
 
     it "executes thor with parameters" do
       ThorSpec.provision.env[:name] = 'name'
 
       subject.invoke :test3, ['a', 'b','c']
+
+      expect(ThorSpec.provision.errors).to be_empty
     end
   end
 end

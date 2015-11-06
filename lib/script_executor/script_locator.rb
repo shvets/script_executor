@@ -6,6 +6,10 @@ require 'script_executor/scripts_transform'
 
 module ScriptLocator
 
+  def errors
+    @errors ||= []
+  end
+
   def scripts file
     data = extract_data file
 
@@ -32,7 +36,11 @@ module ScriptLocator
 
         result = interpolator.interpolate content, env
 
-        puts interpolator.errors if interpolator.errors.size > 0
+        if interpolator.errors.size > 0
+          puts interpolator.errors
+
+          @errors = interpolator.errors
+        end
 
         result
     end

@@ -18,4 +18,4 @@ echo "#{ name }"
 
 echo "#{ name }"
 
-echo "#{params}"
+echo "#{ARGV}"
