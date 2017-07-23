@@ -10,7 +10,7 @@ module ScriptLocator
     @errors ||= []
   end
 
-  def scripts file
+  def scripts(file)
     data = extract_data file
 
     begin
@@ -24,7 +24,7 @@ module ScriptLocator
     end
   end
 
-  def evaluate_script_body content, env, type=:erb
+  def evaluate_script_body(content, env, type=:erb)
     content = content.join("\n") if content.kind_of? Array
 
     case type
@@ -48,7 +48,7 @@ module ScriptLocator
 
   private
 
-  def extract_data file
+  def extract_data(file)
     content = File.read(file)
 
     index = content.index("__END__\n")

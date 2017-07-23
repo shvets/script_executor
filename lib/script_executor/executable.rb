@@ -3,7 +3,7 @@ require 'script_executor/remote_command'
 
 module Executable
 
-  def execute params={}, &code
+  def execute(params={}, &code)
     params = params.clone # try not to destroy external hash
 
     if params.class != Hash
@@ -17,7 +17,7 @@ module Executable
     commands = locate_commands script, &code
 
     if commands.nil?
-      output.puts "No command was provided!"
+      output.puts 'No command was provided!'
     else
       commands = sudo(commands) if params[:sudo]
 
@@ -38,7 +38,7 @@ module Executable
 
   private
 
-  def locate_commands script, &code
+  def locate_commands(script, &code)
     if block_given?
       commands_from_block &code
     elsif script
@@ -48,7 +48,7 @@ module Executable
     end
   end
 
-  def commands_from_block &code
+  def commands_from_block(&code)
     s1 = code.call.split(/\n/)
     s2 = s1.reject {|el| el.strip.size == 0 || el.empty?}
     s3 = s2.collect {|el| el.strip}
@@ -56,7 +56,7 @@ module Executable
     s3.join("\n")
   end
 
-  def commands_from_object object
+  def commands_from_object(object)
     if object.class == String
       object
     elsif object.class == Array
@@ -66,7 +66,7 @@ module Executable
     end
   end
 
-  def sudo commands
+  def sudo(commands)
     "sudo -S -p 'sudo password: ' -s -- '#{commands}'"
   end
 

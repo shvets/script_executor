@@ -14,7 +14,7 @@ class ThorSpec < Thor
 end
 
 describe ThorSpec do
-  describe "#invoke" do
+  describe '#invoke' do
     it "executes thor without parameters" do
       ThorSpec.provision.env[:name] = 'name'
 
@@ -23,7 +23,7 @@ describe ThorSpec do
       expect(ThorSpec.provision.errors).to be_empty
     end
 
-    it "executes thor with parameters" do
+    it 'executes thor with parameters' do
       ThorSpec.provision.env[:name] = 'name'
 
       subject.invoke :test3, ['a', 'b','c']

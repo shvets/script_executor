@@ -2,12 +2,12 @@ require 'spec_helper'
 
 require 'script_locator'
 
-describe ScriptLocator do
+RSpec.describe ScriptLocator do
 
   subject { Object.new.extend ScriptLocator }
 
-  describe "#scripts" do
-    it "reads after __END__" do
+  describe '#scripts' do
+    it 'reads after __END__' do
       file = __FILE__
 
       scripts = subject.scripts(file)
@@ -15,7 +15,7 @@ describe ScriptLocator do
       expect(scripts).not_to be_nil
     end
 
-    it "reads from file completely if it does not have __END__ tag" do
+    it 'reads from file completely if it does not have __END__ tag' do
       file = File.expand_path('support/script4.sh', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
@@ -24,25 +24,25 @@ describe ScriptLocator do
     end
   end
 
-  describe "#evaluate_script_body" do
-    it "locates script inside current file" do
+  describe '#evaluate_script_body' do
+    it 'locates script inside current file' do
       scripts = subject.scripts(__FILE__)
 
-      name = "alisa"
+      name = 'alisa'
 
       result = subject.evaluate_script_body(scripts[:test1][:code], binding)
 
       expect(result).to match /#{name}/
 
-      expect(scripts[:test1][:comment]).to eq "Some description"
+      expect(scripts[:test1][:comment]).to eq 'Some description'
     end
 
-    it "locates script inside external file and evaluates it as string" do
+    it 'locates script inside external file and evaluates it as string' do
       file = File.expand_path('support/script4.sh', File.dirname(__FILE__))
 
       scripts = subject.scripts(file)
 
-      env = {:name => "alisa"}
+      env = {:name => 'alisa'}
 
       result = subject.evaluate_script_body(scripts[:test1][:code], env, :string)
 

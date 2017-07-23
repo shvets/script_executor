@@ -10,7 +10,7 @@
 
   "project": {
     "home": "#{node.home}/acceptance_demo",
-    "ruby_version": "2.2.3",
+    "ruby_version": "2.4.1",
     "gemset": "acceptance_demo"
   }
 }

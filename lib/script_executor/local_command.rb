@@ -6,7 +6,7 @@ class LocalCommand
 
   attr_reader :password, :suppress_output, :capture_output, :output_stream, :simulate
 
-  def initialize params
+  def initialize(params)
     params = sanitize_parameters params
 
     @password = params[:password]
@@ -16,16 +16,16 @@ class LocalCommand
     @output_stream = params[:output_stream]
   end
 
-  def execute commands, line_action
+  def execute(commands, line_action)
     print_commands commands, $stdout
 
     unless simulate
       storage = capture_output ? OutputBuffer.new : nil
       output = if output_stream
-        output_stream
-      else
-        suppress_output ? nil : $stdout
-      end
+                 output_stream
+               else
+                 suppress_output ? nil : $stdout
+               end
 
       commands = commands + inline_password(password) if password
 
@@ -50,10 +50,10 @@ class LocalCommand
 
   private
 
-  def print_commands commands, output
+  def print_commands(commands, output)
     if simulate
-      output.puts "Script:"
-      output.puts "-------"
+      output.puts 'Script:'
+      output.puts '-------'
 
       lines = StringIO.new commands
 
@@ -61,10 +61,10 @@ class LocalCommand
         output.puts line
       end
 
-      output.puts "-------"
+      output.puts '-------'
     else
-      output.puts "Local execution:"
-      output.puts "-------"
+      output.puts 'Local execution:'
+      output.puts '-------'
 
       lines = StringIO.new commands
 
@@ -72,15 +72,15 @@ class LocalCommand
         output.puts line
       end
 
-      output.puts "-------"
+      output.puts '-------'
     end
   end
 
-  def inline_password password
-    password ? "<<EOF\n#{password}\nEOF" : ""
+  def inline_password(password)
+    password ? "<<EOF\n#{password}\nEOF" : ''
   end
 
-  def sanitize_parameters params
+  def sanitize_parameters(params)
     params.each do |key, _|
       params.delete(key) unless permitted_params.include? key.to_sym
     end

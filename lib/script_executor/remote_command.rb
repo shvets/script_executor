@@ -1,11 +1,11 @@
 require 'script_executor/output_buffer'
 require 'net/ssh'
-require "highline"
+require 'highline'
 
 class RemoteCommand
   attr_reader :host, :user, :options, :suppress_output,  :capture_output, :output_stream, :simulate
 
-  def initialize params
+  def initialize(params)
     params = sanitize_parameters params
 
     @host = params.delete(:domain)
@@ -20,8 +20,8 @@ class RemoteCommand
     @options = params
   end
 
-  def execute commands, line_action
-    options[:password] = HighLine.new.ask("Enter password for #{user}: ") { |q| q.echo = '*' } if options[:password].nil?
+  def execute(commands, line_action)
+    options[:password] = HighLine.new.ask("Enter password for #{user}: ") {|q| q.echo = '*'} if options[:password].nil?
     options[:user] = user
 
     print commands, $stdout
@@ -29,10 +29,10 @@ class RemoteCommand
     unless simulate
       storage = capture_output ? OutputBuffer.new : nil
       output = if output_stream
-          output_stream
-        else
-          suppress_output ? nil : $stdout
-        end
+                 output_stream
+               else
+                 suppress_output ? nil : $stdout
+               end
 
       Net::SSH.start(host, user, options) do |session|
         session.exec(commands) do |channel, _, line|
@@ -62,12 +62,12 @@ class RemoteCommand
 
   private
 
-  def print commands, output
+  def print(commands, output)
     ssh_command = ssh_command(user, host, options[:port], options[:identity_file])
 
     if simulate
       output.puts "Remote script: '#{ssh_command}'"
-      output.puts "-------"
+      output.puts '-------'
 
       lines = StringIO.new commands
 
@@ -75,10 +75,10 @@ class RemoteCommand
         output.puts line
       end
 
-      output.puts "-------"
+      output.puts '-------'
     else
       output.puts "Remote execution on: '#{ssh_command}'"
-      output.puts "-------"
+      output.puts '-------'
 
       lines = StringIO.new commands
 
@@ -86,11 +86,11 @@ class RemoteCommand
         output.puts line
       end
 
-      output.puts "-------"
+      output.puts '-------'
     end
   end
 
-  def ssh_command user, host, port, identity_file
+  def ssh_command(user, host, port, identity_file)
     cmd = user ? host : "#{user}@#{host}"
 
     cmd << " -i #{identity_file}" if identity_file
@@ -102,11 +102,11 @@ class RemoteCommand
     "ssh #{cmd}"
   end
 
-  def ask_password? line
+  def ask_password?(line)
     line =~ /^\[sudo\] password for user:/ || line =~ /sudo password:/ || line =~ /Password:/
   end
 
-  def sanitize_parameters params
+  def sanitize_parameters(params)
     params.each do |key, _|
       params.delete(key) unless permitted_params.include? key.to_sym
     end

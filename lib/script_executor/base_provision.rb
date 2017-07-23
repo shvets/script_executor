@@ -1,5 +1,5 @@
 require 'json'
-require "highline"
+require 'highline'
 
 require 'text_interpolator'
 require 'script_executor/executable'
@@ -10,7 +10,7 @@ class BaseProvision
 
   attr_reader :interpolator, :env, :script_list, :server_info
 
-  def initialize config_file_name, scripts_file_names
+  def initialize(config_file_name, scripts_file_names)
     @terminal = HighLine.new
     @interpolator = TextInterpolator.new
 
@@ -27,17 +27,17 @@ class BaseProvision
     create_script_methods
   end
 
-  def run script_name, type=:string, env={}
+  def run(script_name, type=:string, env={})
     execute(server_info) do
       evaluate_script_body(script_list[script_name.to_sym][:code], env, type)
     end
   end
 
-  def ask_password message
-    @terminal.ask(message) { |q| q.echo = "*" }
+  def ask_password(message)
+    @terminal.ask(message) {|q| q.echo = '*'}
   end
 
-  def read_config config_file_name
+  def read_config(config_file_name)
     hash = JSON.parse(File.read(config_file_name), :symbolize_names => true)
 
     result = interpolator.interpolate hash
@@ -55,7 +55,7 @@ class BaseProvision
     end
   end
 
-  def create_thor_methods parent_class, type=:string
+  def create_thor_methods(parent_class, type=:string)
     if parent_class.ancestors.collect(&:to_s).include?('Thor')
       provision = self
 

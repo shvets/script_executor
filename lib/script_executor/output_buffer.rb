@@ -5,7 +5,7 @@ class OutputBuffer
     @buffer = []
   end
 
-  def save line
+  def save(line)
     buffer << line
   end
 end
