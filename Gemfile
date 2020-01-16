@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 group :default do
-  gem 'highline', '1.7.8'
-  gem 'net-ssh', '4.1.0'
-  gem 'text-interpolator', '1.1.9'
-  gem 'json_pure', '2.1.0'
-  gem 'parslet', '1.8.0'
-  gem 'thor', '0.19.4'
+  gem 'highline', '>= 1.7.8'
+  gem 'net-ssh', '>= 4.1.0'
+  gem 'text-interpolator', '>= 1.1.9'
+  gem 'json_pure', '>= 2.1.0'
+  gem 'parslet', '>= 1.8.0'
+  gem 'thor', '>= 0.19.4'
 end
 
 group :development do
