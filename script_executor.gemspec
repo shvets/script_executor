@@ -17,13 +17,13 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   
-  spec.add_runtime_dependency "highline", ["= 1.7.8"]
-  spec.add_runtime_dependency "net-ssh", ["= 4.1.0"]
-  spec.add_runtime_dependency "text-interpolator", ["= 1.1.9"]
-  spec.add_runtime_dependency "json_pure", ["= 2.1.0"]
-  spec.add_runtime_dependency "parslet", ["= 1.8.0"]
-  spec.add_runtime_dependency "thor", ["= 0.19.4"]
-  spec.add_runtime_dependency "rspec", ["= 3.6.0"]
+  spec.add_runtime_dependency "highline", [">= 1.7.8"]
+  spec.add_runtime_dependency "net-ssh", [">= 4.1.0"]
+  spec.add_runtime_dependency "text-interpolator", [">= 1.1.9"]
+  spec.add_runtime_dependency "json_pure", [">= 2.1.0"]
+  spec.add_runtime_dependency "parslet", [">= 1.8.0"]
+  spec.add_runtime_dependency "thor", [">= 0.19.4"]
+  spec.add_development_dependency "rspec", ["= 3.6.0"]
   spec.add_development_dependency "gemspec_deps_gen", ["= 1.1.2"]
   spec.add_development_dependency "gemcutter", ["= 0.7.1"]
   spec.add_development_dependency "awesome_print", ["= 1.8.0"]
